@@ -1,0 +1,184 @@
+{
+  "kind": "build_request",
+  "title": "Create Yadav Family Restaurant multi-page website",
+  "projectName": "Yadav Family Restaurant",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement the base website layout with a persistent header (logo + navigation links for Home, About, Menu, Gallery, Contact), a main content area, and a persistent footer (address, phone number, and social media links).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "🌐 Basic Website Layout Structure\nHeader\n→ Logo\n→ Menu (Home | About | Menu | Gallery | Contact)\nBody\n→ Page Content\nFooter\n→ Address\n→ Phone Number\n→ Social Media Links"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header is visible on all pages and includes a logo area plus navigation links: Home, About, Menu, Gallery, Contact.",
+        "Footer is visible on all pages and contains the restaurant address, phone number, and a social links section (links may be placeholders if URLs are not provided).",
+        "Navigation between pages works without full page reloads (client-side routing)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create the Home page with the restaurant name, tagline, welcome message, opening hours, and two CTAs: a “Call Now” action for +91-9876543210 and an “Order Online” button.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "🏠 1. Home Page\nRestaurant Name: Yadav Family Restaurant\nTagline: “Delicious Taste, Family Feel”\nWelcome Message:\nWelcome to Yadav Family Restaurant – where taste meets tradition. We serve fresh, hygienic and delicious vegetarian & non-vegetarian food for families and friends.\nOpening Hours:\nMonday – Sunday: 10:00 AM – 11:00 PM\nCall Now Button: 📞 +91-9876543210\nOrder Online Button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page renders the name “Yadav Family Restaurant” and the tagline “Delicious Taste, Family Feel”.",
+        "Home page displays the provided welcome message and opening hours (Monday–Sunday: 10:00 AM–11:00 PM).",
+        "“Call Now” triggers a phone dial action via a tel: link for +91-9876543210.",
+        "“Order Online” button is present; if no URL is provided, it should clearly appear as a button and use a safe placeholder link (e.g., #) without breaking navigation."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create the About page containing: started in 2020 in Meerut; mission statement; and the listed highlights (fresh ingredients, clean kitchen, family friendly environment, birthday & party booking available).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "📖 2. About Us Page\nYadav Family Restaurant was started in 2020 in Meerut.\nOur mission is to provide quality food at affordable prices.\n✅ Fresh Ingredients\n✅ Clean Kitchen\n✅ Family Friendly Environment\n✅ Birthday & Party Booking Available"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About page states the restaurant started in 2020 in Meerut.",
+        "About page displays the mission statement: “Our mission is to provide quality food at affordable prices.”",
+        "About page includes all four highlights as a list or cards: Fresh Ingredients, Clean Kitchen, Family Friendly Environment, Birthday & Party Booking Available."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create the Menu page with the provided categories and items with prices: Veg Items, Non-Veg Items, Breads, Beverages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "🍛 3. Menu Page\n🥘 Veg Items\nPaneer Butter Masala – ₹220\nDal Makhani – ₹180\nVeg Biryani – ₹200\n🍗 Non-Veg Items\nChicken Curry – ₹280\nButter Chicken – ₹320\nChicken Biryani – ₹250\n🍞 Breads\nTandoori Roti – ₹15\nButter Naan – ₹35\n🥤 Beverages\nCold Drink – ₹40\nLassi – ₹60"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Menu page displays four sections: Veg Items, Non-Veg Items, Breads, Beverages.",
+        "Each menu item appears with its exact name and price as provided (including ₹ symbol).",
+        "Layout is readable on mobile and desktop (e.g., stacked sections on mobile, grid on larger screens)."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create the Gallery page with three clearly labeled sections: Restaurant Interior Photos, Food Images, and Party Celebration Pictures, and display gallery images (use generated placeholder images until real photos are provided).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "🖼️ 4. Gallery Page\nRestaurant Interior Photos\nFood Images\nParty Celebration Pictures"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Gallery page includes three labeled sections: Restaurant Interior Photos, Food Images, Party Celebration Pictures.",
+        "Each section displays at least one image card/tile using local static assets (not fetched from the backend).",
+        "Images are responsive and maintain aspect ratio without layout breaking."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create the Contact page showing the provided address, phone, email, and an embedded Google Map location (via an iframe embed based on the address text if no specific map link is provided).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "📍 5. Contact Page\nAddress:\nYadav Family Restaurant\nNear Pahelwan Farm, Meerut, Uttar Pradesh\nPhone: +91-9876543210\nEmail: yadavrestaurant@gmail.com\nGoogle Map Location"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact page displays the full address text: “Yadav Family Restaurant, Near Pahelwan Farm, Meerut, Uttar Pradesh”.",
+        "Phone number +91-9876543210 is displayed and is clickable via a tel: link.",
+        "Email yadavrestaurant@gmail.com is displayed and is clickable via a mailto: link.",
+        "A Google Map embed is present on the page (iframe) and does not require an API key."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Apply a cohesive, restaurant-appropriate visual theme (colors, typography, spacing, and component styling) consistently across all pages, avoiding a blue/purple default look.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "🍽️ Yadav Family Restaurant"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages share consistent typography and spacing scale.",
+        "Color palette and styling feel restaurant-themed (e.g., warm neutrals/earth tones) and are applied consistently to header, footer, buttons, and section headings.",
+        "Theme does not primarily rely on blue/purple as the main brand colors."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add required generated images to the project as static assets and render them in the UI (store them under frontend/public/assets/generated).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "🖼️ 4. Gallery Page\nRestaurant Interior Photos\nFood Images\nParty Celebration Pictures\n\nHeader\n→ Logo"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated with the specified filenames.",
+        "The logo image is rendered in the site header.",
+        "Gallery page renders the generated placeholder images from local static assets."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text in the application UI.",
+    "Do not edit files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT; compose them from outside those directories if needed.",
+    "Do not add third-party authentication providers; if authentication is ever needed, only Internet Identity is supported (not required for this website)."
+  ],
+  "nonGoals": [
+    "No online payment processing or checkout flow.",
+    "No admin dashboard or CMS for editing menu/gallery content.",
+    "No backend data storage is required for this static informational website (unless explicitly requested later)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Restaurant logo mark featuring a plate/spoon motif with warm colors (yadav-logo.dim_512x512.png)",
+      "Warm, inviting restaurant hero banner illustration with subtle Indian cuisine cues (yadav-hero.dim_1600x600.png)",
+      "Cozy restaurant interior photo-style placeholder image (gallery-interior-1.dim_1200x800.png)",
+      "Indian food platter photo-style placeholder image (gallery-food-1.dim_1200x800.png)",
+      "Birthday/party celebration in a restaurant photo-style placeholder image (gallery-party-1.dim_1200x800.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

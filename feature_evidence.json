@@ -1,0 +1,162 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-the-base-website-layout-with-a-persistent-header-logo-navigation-links-for-home-about-menu-gallery-contact-a-main-content-area-and-a-persistent-footer-address-phone-number-and-social-media-links",
+      "featureTitle": "Implement the base website layout with a persistent header (logo + navigation links for Home, About, Menu, Gallery, Contact), a main content area, and a persistent footer (address, phone number, and social media links).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/main.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-home-page-with-the-restaurant-name-tagline-welcome-message-opening-hours-and-two-ctas-a-call-now-action-for-91-9876543210-and-an-order-online-button",
+      "featureTitle": "Create the Home page with the restaurant name, tagline, welcome message, opening hours, and two CTAs: a “Call Now” action for +91-9876543210 and an “Order Online” button.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-about-page-containing-started-in-2020-in-meerut-mission-statement-and-the-listed-highlights-fresh-ingredients-clean-kitchen-family-friendly-environment-birthday-party-booking-available",
+      "featureTitle": "Create the About page containing: started in 2020 in Meerut; mission statement; and the listed highlights (fresh ingredients, clean kitchen, family friendly environment, birthday & party booking available).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/AboutPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-menu-page-with-the-provided-categories-and-items-with-prices-veg-items-non-veg-items-breads-beverages",
+      "featureTitle": "Create the Menu page with the provided categories and items with prices: Veg Items, Non-Veg Items, Breads, Beverages.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/MenuPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-gallery-page-with-three-clearly-labeled-sections-restaurant-interior-photos-food-images-and-party-celebration-pictures-and-display-gallery-images-use-generated-placeholder-images-until-real-photos-are-provided",
+      "featureTitle": "Create the Gallery page with three clearly labeled sections: Restaurant Interior Photos, Food Images, and Party Celebration Pictures, and display gallery images (use generated placeholder images until real photos are provided).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/GalleryPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-contact-page-showing-the-provided-address-phone-email-and-an-embedded-google-map-location-via-an-iframe-embed-based-on-the-address-text-if-no-specific-map-link-is-provided",
+      "featureTitle": "Create the Contact page showing the provided address, phone, email, and an embedded Google Map location (via an iframe embed based on the address text if no specific map link is provided).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-restaurant-appropriate-visual-theme-colors-typography-spacing-and-component-styling-consistently-across-all-pages-avoiding-a-blue-purple-default-look",
+      "featureTitle": "Apply a cohesive, restaurant-appropriate visual theme (colors, typography, spacing, and component styling) consistently across all pages, avoiding a blue/purple default look.",
+      "files": [
+        "frontend/index.css",
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-required-generated-images-to-the-project-as-static-assets-and-render-them-in-the-ui-store-them-under-frontend-public-assets-generated",
+      "featureTitle": "Add required generated images to the project as static assets and render them in the UI (store them under frontend/public/assets/generated).",
+      "files": [
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/pages/GalleryPage.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

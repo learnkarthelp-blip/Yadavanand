@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a basic restaurant website for \"Yadav Family Restaurant\" with Home, About Us, Menu, Gallery, and Contact pages, including header navigation, footer info, and key CTAs (Call Now, Order Online).",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Restaurant logo mark featuring a plate/spoon motif with warm colors (yadav-logo.dim_512x512.png)\n- Warm, inviting restaurant hero banner illustration with subtle Indian cuisine cues (yadav-hero.dim_1600x600.png)\n- Cozy restaurant interior photo-style placeholder image (gallery-interior-1.dim_1200x800.png)\n- Indian food platter photo-style placeholder image (gallery-food-1.dim_1200x800.png)\n- Birthday/party celebration in a restaurant photo-style placeholder image (gallery-party-1.dim_1200x800.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-the-base-website-layout-with-a-persistent-header-logo-navigation-links-for-home-about-menu-gallery-contact-a-main-content-area-and-a-persistent-footer-address-phone-number-and-social-media-links",
+      "title": "Implement the base website layout with a persistent header (logo + navigation links for Home, About, Menu, Gallery, Contact), a main content area, and a persistent footer (address, phone number, and social media links).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-home-page-with-the-restaurant-name-tagline-welcome-message-opening-hours-and-two-ctas-a-call-now-action-for-91-9876543210-and-an-order-online-button",
+      "title": "Create the Home page with the restaurant name, tagline, welcome message, opening hours, and two CTAs: a “Call Now” action for +91-9876543210 and an “Order Online” button.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-about-page-containing-started-in-2020-in-meerut-mission-statement-and-the-listed-highlights-fresh-ingredients-clean-kitchen-family-friendly-environment-birthday-party-booking-available",
+      "title": "Create the About page containing: started in 2020 in Meerut; mission statement; and the listed highlights (fresh ingredients, clean kitchen, family friendly environment, birthday & party booking available).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-menu-page-with-the-provided-categories-and-items-with-prices-veg-items-non-veg-items-breads-beverages",
+      "title": "Create the Menu page with the provided categories and items with prices: Veg Items, Non-Veg Items, Breads, Beverages.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-gallery-page-with-three-clearly-labeled-sections-restaurant-interior-photos-food-images-and-party-celebration-pictures-and-display-gallery-images-use-generated-placeholder-images-until-real-photos-are-provided",
+      "title": "Create the Gallery page with three clearly labeled sections: Restaurant Interior Photos, Food Images, and Party Celebration Pictures, and display gallery images (use generated placeholder images until real photos are provided).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-contact-page-showing-the-provided-address-phone-email-and-an-embedded-google-map-location-via-an-iframe-embed-based-on-the-address-text-if-no-specific-map-link-is-provided",
+      "title": "Create the Contact page showing the provided address, phone, email, and an embedded Google Map location (via an iframe embed based on the address text if no specific map link is provided).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-restaurant-appropriate-visual-theme-colors-typography-spacing-and-component-styling-consistently-across-all-pages-avoiding-a-blue-purple-default-look",
+      "title": "Apply a cohesive, restaurant-appropriate visual theme (colors, typography, spacing, and component styling) consistently across all pages, avoiding a blue/purple default look.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-required-generated-images-to-the-project-as-static-assets-and-render-them-in-the-ui-store-them-under-frontend-public-assets-generated",
+      "title": "Add required generated images to the project as static assets and render them in the UI (store them under frontend/public/assets/generated).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create Home page with restaurant name, tagline, welcome message, opening hours, and CTA buttons (Call Now +91-9876543210, Order Online)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create About Us page with restaurant history (started 2020 in Meerut), mission statement, and highlights (fresh ingredients, clean kitchen, family-friendly, birthday/party booking)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create Menu page with categorized items and prices (Veg, Non-Veg, Breads, Beverages)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create Gallery page sections for interior photos, food images, and party celebration pictures",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create Contact page with address, phone, email, and embedded Google Map location",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Implement basic site layout: header with logo + navigation (Home | About | Menu | Gallery | Contact), body content area, and footer with address/phone/social links",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Yadav Family Restaurant",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-18T05:05:33.858Z",
+  "summary": "Most frontend page structure and routing appear implemented: persistent SiteLayout with header/nav + footer, five pages (Home/About/Menu/Gallery/Contact), warm theme variables in CSS, and local-asset image references for logo/hero/gallery. However, the diff summary does not show the required generated image files being added under frontend/public/assets/generated, and it introduces Internet Identity/auth and backend actor scaffolding that were not requested for a static informational site.",
+  "missing_requirements": [
+    {
+      "id": "REQ-8",
+      "requirement": "Add required generated images to the project as static assets under frontend/public/assets/generated with specified filenames, and render them in the UI (logo in header; gallery uses local static assets).",
+      "reason": "UI code references the expected image paths, but the diff summary does not include any added files under frontend/public/assets/generated, so the acceptance criteria about the images existing in the repo is not evidenced.",
+      "evidence": [
+        "frontend/src/components/SiteLayout.tsx (references /assets/generated/yadav-logo.dim_512x512.png)",
+        "frontend/src/pages/HomePage.tsx (references /assets/generated/yadav-hero.dim_1600x600.png)",
+        "frontend/src/pages/GalleryPage.tsx (references /assets/generated/gallery-*.png)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication/provider and actor creation hooks (React Query actor management) added to the app bootstrap.",
+      "reason": "BuildRequest describes a static informational restaurant website and explicitly says authentication is not required; adding II integration and actor logic is not requested by any REQ.",
+      "evidence": [
+        "frontend/src/main.tsx (wraps app with InternetIdentityProvider)",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Backend canister/actor stub added (backend/main.mo).",
+      "reason": "Non-goals specify no backend data storage is required for this static informational website; no backend features are requested in REQ-1..REQ-8.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/SiteLayout.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AboutPage.tsx",
+    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/pages/GalleryPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/MenuPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

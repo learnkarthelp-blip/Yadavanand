@@ -1,0 +1,227 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Yadav Family Restaurant multi-page website (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a shared site layout with persistent header navigation and footer across all pages using client-side routing.",
+      "acceptanceCriteria": [
+        "Header is visible on all pages and includes a logo area plus navigation links: Home, About, Menu, Gallery, Contact.",
+        "Footer is visible on all pages and contains the restaurant address, phone number, and a social links section (links may be placeholders if URLs are not provided).",
+        "Navigation between pages works without full page reloads (client-side routing)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app root with client-side routing and wire routes for Home, About, Menu, Gallery, Contact to a shared layout wrapper."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Implement the persistent header (including logo + nav links) and footer (address, phone, social links placeholders) and render nested page content via an outlet/children. Use shadcn-ui components (e.g., Button, Card) where appropriate for consistent styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Ensure the root App component is imported from the created frontend/src/App.tsx and fix the global stylesheet import so styles load on all pages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build the Home page with restaurant intro content, opening hours, and Call Now / Order Online CTAs.",
+      "acceptanceCriteria": [
+        "Home page renders the name “Yadav Family Restaurant” and the tagline “Delicious Taste, Family Feel”.",
+        "Home page displays the provided welcome message and opening hours (Monday–Sunday: 10:00 AM–11:00 PM).",
+        "“Call Now” triggers a phone dial action via a tel: link for +91-9876543210.",
+        "“Order Online” button is present; if no URL is provided, it should clearly appear as a button and use a safe placeholder link (e.g., #) without breaking navigation."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the Home page UI with name, tagline, welcome message, opening hours, and CTAs including tel: link for +91-9876543210 and an Order Online placeholder button. Use shadcn-ui components (e.g., Button, Card) for CTA and section layout; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Home route to render HomePage within the shared SiteLayout and ensure navigation link for Home routes correctly."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Ensure the header navigation includes a Home link and that active/hover states match the site theme. Use shadcn-ui primitives as needed; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build the About page with founding info, mission statement, and highlights list/cards.",
+      "acceptanceCriteria": [
+        "About page states the restaurant started in 2020 in Meerut.",
+        "About page displays the mission statement: “Our mission is to provide quality food at affordable prices.”",
+        "About page includes all four highlights as a list or cards: Fresh Ingredients, Clean Kitchen, Family Friendly Environment, Birthday & Party Booking Available."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Create the About page content including 2020 Meerut origin, mission statement, and the four highlights displayed as a readable list or cards. Use shadcn-ui Card/List styling for highlights; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the About route to render AboutPage within the shared SiteLayout and ensure header navigation points to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build the Menu page with four categories and exact items/prices with a responsive layout.",
+      "acceptanceCriteria": [
+        "Menu page displays four sections: Veg Items, Non-Veg Items, Breads, Beverages.",
+        "Each menu item appears with its exact name and price as provided (including ₹ symbol).",
+        "Layout is readable on mobile and desktop (e.g., stacked sections on mobile, grid on larger screens)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/MenuPage.tsx",
+          "operation": "create",
+          "description": "Create the Menu page with sections Veg Items, Non-Veg Items, Breads, Beverages and render the provided items with exact names and ₹ prices, using responsive section/card/grid layout. Use shadcn-ui Card and typography patterns for readability; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Menu route to render MenuPage within the shared SiteLayout and ensure header navigation points to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build the Gallery page with three labeled sections and responsive locally-served placeholder images.",
+      "acceptanceCriteria": [
+        "Gallery page includes three labeled sections: Restaurant Interior Photos, Food Images, Party Celebration Pictures.",
+        "Each section displays at least one image card/tile using local static assets (not fetched from the backend).",
+        "Images are responsive and maintain aspect ratio without layout breaking."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/GalleryPage.tsx",
+          "operation": "create",
+          "description": "Create the Gallery page with the three labeled sections and render local static images from frontend/public/assets/generated, using responsive image tiles/cards with preserved aspect ratio. Use shadcn-ui Card for image tiles if desired; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Gallery route to render GalleryPage within the shared SiteLayout and ensure header navigation points to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build the Contact page with address, clickable phone/email, and a Google Maps iframe embed without an API key.",
+      "acceptanceCriteria": [
+        "Contact page displays the full address text: “Yadav Family Restaurant, Near Pahelwan Farm, Meerut, Uttar Pradesh”.",
+        "Phone number +91-9876543210 is displayed and is clickable via a tel: link.",
+        "Email yadavrestaurant@gmail.com is displayed and is clickable via a mailto: link.",
+        "A Google Map embed is present on the page (iframe) and does not require an API key."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "create",
+          "description": "Create the Contact page with the provided address, clickable tel: +91-9876543210, clickable mailto: yadavrestaurant@gmail.com, and an iframe Google Maps embed derived from the address text (no API key). Use shadcn-ui components for section framing if helpful; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Contact route to render ContactPage within the shared SiteLayout and ensure header navigation points to it."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Ensure footer includes the same address and phone number presented on Contact page, plus social media placeholder links, styled consistently with the theme. Use shadcn-ui components for link/button styling if needed; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Apply a consistent warm, restaurant-appropriate visual theme (typography, spacing, colors) across the site and avoid blue/purple as primary brand colors.",
+      "acceptanceCriteria": [
+        "All pages share consistent typography and spacing scale.",
+        "Color palette and styling feel restaurant-themed (e.g., warm neutrals/earth tones) and are applied consistently to header, footer, buttons, and section headings.",
+        "Theme does not primarily rely on blue/purple as the main brand colors."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.css",
+          "operation": "modify",
+          "description": "Adjust the global design tokens/CSS variables and base styles to a warm, restaurant-themed palette (earth tones/warm neutrals) and consistent typography/spacing, ensuring the primary brand color is not blue/purple."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Tune Tailwind theme extensions (as needed) to support the warm brand palette and consistent radius/shadows/typography used across header, footer, buttons, and section headings."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Align header/footer styling (backgrounds, borders, link states, buttons) to the global theme for consistent appearance across pages. Use shadcn-ui components for consistent UI patterns; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Add required generated images as static assets and render them in the header and gallery UI.",
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated with the specified filenames.",
+        "The logo image is rendered in the site header.",
+        "Gallery page renders the generated placeholder images from local static assets."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/yadav-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated restaurant logo image asset at frontend/public/assets/generated/yadav-logo.dim_512x512.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/yadav-hero.dim_1600x600.png",
+          "operation": "create",
+          "description": "Add the generated warm hero banner image asset at frontend/public/assets/generated/yadav-hero.dim_1600x600.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-interior-1.dim_1200x800.png",
+          "operation": "create",
+          "description": "Add the generated placeholder image asset at frontend/public/assets/generated/gallery-interior-1.dim_1200x800.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-food-1.dim_1200x800.png",
+          "operation": "create",
+          "description": "Add the generated placeholder image asset at frontend/public/assets/generated/gallery-food-1.dim_1200x800.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-party-1.dim_1200x800.png",
+          "operation": "create",
+          "description": "Add the generated placeholder image asset at frontend/public/assets/generated/gallery-party-1.dim_1200x800.png."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Render the logo image from frontend/public/assets/generated/yadav-logo.dim_512x512.png in the persistent header (with accessible alt text). Use shadcn-ui components for header layout if needed; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Render the hero banner image from frontend/public/assets/generated/yadav-hero.dim_1600x600.png on the Home page in a responsive manner. Use shadcn-ui components for framing if helpful; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/GalleryPage.tsx",
+          "operation": "modify",
+          "description": "Render gallery section images using the local static assets frontend/public/assets/generated/gallery-interior-1.dim_1200x800.png, frontend/public/assets/generated/gallery-food-1.dim_1200x800.png, and frontend/public/assets/generated/gallery-party-1.dim_1200x800.png with responsive sizing and preserved aspect ratios. Use shadcn-ui Card for image tiles if desired; verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

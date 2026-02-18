@@ -1,0 +1,20 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods defined.",
+  "feature_evidence.json": "Feature evidence report mapping implemented app features to corresponding frontend files and components.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose of each major frontend file.",
+  "frontend/index.css": "Empty stylesheet placeholder with no content.",
+  "frontend/index.html": "HTML entry point defining root div and loading the main React script.",
+  "frontend/src/App.tsx": "Sets up TanStack Router with routes wrapped in the SiteLayout component.",
+  "frontend/src/components/SiteLayout.tsx": "Layout component providing persistent header, navigation, and footer around page content.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages a backend actor based on Internet Identity state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Implements Internet Identity context, auth client setup, login flow, and identity persistence.",
+  "frontend/src/index.css": "Tailwind base and theme variables defining warm restaurant-themed color palette for light and dark modes.",
+  "frontend/src/main.tsx": "React entry point initializing QueryClient, InternetIdentityProvider, and rendering the app.",
+  "frontend/src/pages/AboutPage.tsx": "Renders an About page with hero, story, mission, and highlight sections using static text and icons.",
+  "frontend/src/pages/ContactPage.tsx": "Displays contact details including address, phone, email, hours, and a map section.",
+  "frontend/src/pages/GalleryPage.tsx": "Shows gallery sections for interior, food, and party images with icons and image grids.",
+  "frontend/src/pages/HomePage.tsx": "Implements the homepage with a hero section, opening hours, quick links, and CTA elements.",
+  "frontend/src/pages/MenuPage.tsx": "Renders categorized menu sections with icons and item lists including names and prices.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom fonts, color tokens, container settings, shadows, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Stores the project’s state, including versioning, required images, and a list of implemented website features for the restaurant build."
+}
